@@ -30,6 +30,10 @@ export default defineConfig({
   server: {
     open: process.env.NODE_ENV === 'development',
   },
+  build: {
+    manifest: 'manifest.json',
+    ssrManifest: 'ssr-manifest.json',
+  },
   optimizeDeps: {
     entries: ['./src/**/*.{js,jsx,ts,tsx,mdx,md}'],
     exclude: ['solid-mdx'],

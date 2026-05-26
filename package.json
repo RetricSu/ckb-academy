@@ -10,6 +10,7 @@
     "dev:site": "turbo run dev --filter site",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write --ignore-path .gitignore '{packages,site}/**/*.{js,jsx,ts,tsx}'",
+    "postinstall": "patch-package",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -29,14 +30,28 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-import-resolver-typescript": "2.7.1",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-simple-import-sort": "10.0.0",
     "eslint-plugin-solid": "0.12.1",
-    "prettier": "^2.8.4",
+    "patch-package": "^8.0.1",
+    "postinstall-postinstall": "^2.1.0",
+    "prettier": "^3.5.3",
     "turbo": "latest"
   },
-  "packageManager": "yarn@1.22.19",
   "dependencies": {
     "husky": "^8.0.3"
-  }
+  },
+  "resolutions": {
+    "minimatch": "^3.1.4",
+    "picomatch": "^2.3.2",
+    "flatted": "^3.4.2",
+    "immutable": "^4.3.8",
+    "ws": "^8.20.1",
+    "uuid": "^11.1.1",
+    "follow-redirects": "^1.15.12",
+    "js-yaml": "^4.1.1",
+    "brace-expansion": "^2.0.3",
+    "diff": "^7.0.0"
+  },
+  "packageManager": "yarn@1.22.19"
 }

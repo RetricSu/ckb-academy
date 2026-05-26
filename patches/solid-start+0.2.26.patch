@@ -1,0 +1,13 @@
+diff --git a/node_modules/solid-start/vite/plugin.js b/node_modules/solid-start/vite/plugin.js
+index abcdef1..1234567 100644
+--- a/node_modules/solid-start/vite/plugin.js
++++ b/node_modules/solid-start/vite/plugin.js
+@@ -625,7 +625,7 @@ function solidStartFileSystemRouter(options) {
+           "import.meta.env.START_ISLANDS_ROUTER": JSON.stringify(
+             options.islandsRouter ? true : false
+           ),
+-          _$DEBUG: process.env.NODE_ENV === "production" ? "(() => {})" : "globalThis._$DEBUG",
++          _$DEBUG: process.env.NODE_ENV === "production" ? "Boolean" : "globalThis._$DEBUG",
+           "import.meta.env.START_ADAPTER": JSON.stringify(
+             typeof options.adapter === "string"
+               ? options.adapter

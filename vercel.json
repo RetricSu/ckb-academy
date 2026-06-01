@@ -1,5 +1,6 @@
 {
   "framework": null,
+  "installCommand": "npm install -g pnpm@9.15.9 && pnpm install --frozen-lockfile",
   "buildCommand": "pnpm build",
   "outputDirectory": "site/dist/public",
   "rewrites": [

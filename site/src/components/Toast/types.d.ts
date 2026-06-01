@@ -1,13 +1,13 @@
-import { Options, Placement } from '@zag-js/toast/dist/toast.types';
+import { Placement, ToastOptions } from '@zag-js/toast';
 
 type MaybeFunction<Value, Args> = Value | ((arg: Args) => Value);
 export type ToastContext = {
   count: number;
   isVisible(id: string): boolean;
 
-  create(options: Options): string | undefined;
+  create(options: ToastOptions): string | undefined;
 
-  upsert(options: Options): string | undefined;
+  upsert(options: ToastOptions): string | undefined;
 
   dismiss(id?: string): void;
 
@@ -15,23 +15,23 @@ export type ToastContext = {
 
   dismissByPlacement(placement: Placement): void;
 
-  update(id: string, options: Options): string | undefined;
+  update(id: string, options: ToastOptions): string | undefined;
 
-  loading(options: Options): string | undefined;
+  loading(options: ToastOptions): string | undefined;
 
-  success(options: Options): string | undefined;
-  info(options: Options): string | undefined;
+  success(options: ToastOptions): string | undefined;
+  info(options: ToastOptions): string | undefined;
 
-  error(options: Options): string | undefined;
+  error(options: ToastOptions): string | undefined;
 
   promise<T>(
     promise: Promise<T>,
     options: {
-      loading: Options;
-      success: MaybeFunction<Options, T>;
-      error: MaybeFunction<Options, Error>;
+      loading: ToastOptions;
+      success: MaybeFunction<ToastOptions, T>;
+      error: MaybeFunction<ToastOptions, Error>;
     },
-    shared?: Options,
+    shared?: ToastOptions,
   ): Promise<T>;
 
   pause(id?: string): void;

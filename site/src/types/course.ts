@@ -1,6 +1,11 @@
 import { Component, JSX } from 'solid-js';
-import { MDXComponent } from 'solid-mdx/client';
 import { Contributor, TranslateResource } from '~/types';
+
+type MDXProps = {
+  components?: Record<string, Component>;
+  children?: JSX.Element;
+};
+type MDXComponent = (props: MDXProps) => JSX.Element;
 
 export enum CourseType {
   Interactive,

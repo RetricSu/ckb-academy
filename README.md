@@ -53,15 +53,15 @@ The front-end of this project is powered by [SolidStart](https://start.solidjs.c
 
 ```bash
 # install dependencies
-yarn
+pnpm install
 
 # Install Git hook to achieve code formatting during code submission.
-yarn run prepare
+pnpm run prepare
 
 # start a development server: https://start.solidjs.com/api/dev
-yarn dev:site
+pnpm dev:site
 # or
-turbo run dev
+pnpm turbo run dev
 ```
 
 ## Building
@@ -70,16 +70,16 @@ turbo run dev
 
 ```bash
 # https://start.solidjs.com/api/build
-yarn build
+pnpm build
 # or
-turbo run build
+pnpm turbo run build
 ```
 
 The `output` directory will appear in `site/dist/public`.
 
 ```bash
 # https://start.solidjs.com/api/start
-yarn start
+pnpm start
 ```
 
 ## Contributing

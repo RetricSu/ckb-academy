@@ -11,8 +11,7 @@ import {
   splitProps,
   useContext,
 } from 'solid-js';
-import { Course, CourseChapter } from '~/types/course';
-import { MDXComponent } from 'solid-mdx/client';
+import { Course, CourseChapter, MDXComponent } from '~/types/course';
 import { LangsEnum } from '~/common/constants/site-basic';
 import { useI18n } from '@solid-primitives/i18n';
 import { useToast } from '~/components/Toast/ToastContext';

@@ -3,7 +3,7 @@ import { projects } from '~/data/playground.data';
 import { FileData } from '~/components/Playground/FileState';
 import { createProjectState } from '~/components/Playground/index';
 import { createFileTreeFromRepo } from '~/components/Playground/createFileTreeToGit';
-import { RouteDataFuncArgs } from '@solidjs/router/dist/types';
+import { RouteDataFuncArgs } from '@solidjs/router';
 
 const REPO_PATH = 'GitOfJason/ckb-lab-playground-projects';
 

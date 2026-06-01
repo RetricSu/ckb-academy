@@ -77,7 +77,7 @@ const OutputSection: Component = () => {
         },
       ],
       inputs: inputCells().map(
-        (cell) => ({ previousOutput: cell.outPoint, since: '0x0' } as Input),
+        (cell) => ({ previousOutput: cell.outPoint, since: '0x0' }) as Input,
       ),
       outputs: outputCells().map((cell) => cell.cellOutput as Output),
       outputsData: ['0x'],

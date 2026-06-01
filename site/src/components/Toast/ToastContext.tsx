@@ -10,12 +10,12 @@ import {
 import * as zagToast from '@zag-js/toast';
 import { normalizeProps, useMachine } from '@zag-js/solid';
 import Toast from '~/components/Toast/index';
-import { Options, Toaster } from '@zag-js/toast/dist/toast.types';
+import { ToastOptions } from '@zag-js/toast';
 import { ToastContext } from '~/components/Toast/types';
 
 const toastContext = createContext<ToastContext>();
 export const useToast = () => useContext(toastContext)!;
-export const toast: Toaster = zagToast.api()!;
+export const toast: ReturnType<typeof zagToast.api> = zagToast.api()!;
 
 const ToastProvider: ParentComponent = (props) => {
   const [state, send] = useMachine(
@@ -24,23 +24,23 @@ const ToastProvider: ParentComponent = (props) => {
   const api = createMemo(() => zagToast.group.connect(state, send, normalizeProps));
   const context: ToastContext = {
     ...api(),
-    create: (options: Options) => {
+    create: (options: ToastOptions) => {
       return api().create({
         ...options,
         type: 'custom',
         placement: options.placement ?? 'top-end',
       });
     },
-    success: (options: Options) => {
+    success: (options: ToastOptions) => {
       return api().success({ ...options, placement: options.placement ?? 'top-end' });
     },
-    error: (options: Options) => {
+    error: (options: ToastOptions) => {
       return api().error({ ...options, placement: options.placement ?? 'top-end' });
     },
-    info: (options: Options) => {
+    info: (options: ToastOptions) => {
       return api().create({ ...options, type: 'info', placement: options.placement ?? 'top-end' });
     },
-    loading: (options: Options) => {
+    loading: (options: ToastOptions) => {
       return api().loading({ ...options, placement: options.placement ?? 'top-end' });
     },
   };

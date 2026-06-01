@@ -2,7 +2,7 @@ import { createMemo, createUniqueId, JSX, ParentComponent, Show } from 'solid-js
 import * as tooltip from '@zag-js/tooltip';
 import { normalizeProps, useMachine } from '@zag-js/solid';
 import './index.css';
-import { Placement } from '@zag-js/toast/dist/toast.types';
+import { Placement } from '@zag-js/toast';
 import { Portal } from 'solid-js/web';
 
 interface Props {

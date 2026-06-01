@@ -1,4 +1,4 @@
-import { Component } from 'solid-js/types/render/component';
+import { Component } from 'solid-js';
 import { useI18n } from '@solid-primitives/i18n';
 import { createMemo, For } from 'solid-js';
 import { NavLink } from '@solidjs/router';

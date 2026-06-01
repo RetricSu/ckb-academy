@@ -1,4 +1,4 @@
-import { Component } from 'solid-js/types/render/component';
+import { Component } from 'solid-js';
 import { NavLink } from '@solidjs/router';
 import './NavBar.css';
 import { BiSolidLeftArrow } from 'solid-icons/bi';

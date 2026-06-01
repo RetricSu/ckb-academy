@@ -19,9 +19,8 @@ Thumbs.db
 
 # debug
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
+pnpm-debug.log*
+pnpm-error.log*
 
 # local env files
 .env.local
@@ -32,8 +31,8 @@ yarn-error.log*
 # turbo
 .turbo
 
-#yarn
-.yarn
+# pnpm
+.pnpm-store
 
 # IDEs and editors
 /.idea

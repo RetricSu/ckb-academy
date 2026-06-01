@@ -1,4 +1,4 @@
-import { Component } from 'solid-js/types/render/component';
+import { Component } from 'solid-js';
 import { BiRegularWorld, BiSolidMoon, BiSolidSun } from 'solid-icons/bi';
 import { createMemo, For, useContext } from 'solid-js';
 import { AppContext } from '~/AppContext';

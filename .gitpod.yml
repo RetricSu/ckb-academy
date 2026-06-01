@@ -6,8 +6,8 @@
 # https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
   # https://www.gitpod.io/docs/configure/workspaces/tasks#execution-order
-  - init: yarn install
-    command: yarn dev
+  - init: pnpm install
+    command: pnpm dev
     # https://www.gitpod.io/docs/configure/workspaces/tasks#openmode
     openMode: split-left
 

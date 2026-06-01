@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "buildCommand": "yarn build",
+  "buildCommand": "pnpm build",
   "outputDirectory": "site/dist/public",
   "rewrites": [
     {
